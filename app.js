@@ -266,9 +266,9 @@ var dataObject = {
 };
 function printAllToConsole(dataObj)
 {
-for (var key in dataObj) {
+	for (var key in dataObj) {
 		if (dataObj.hasOwnProperty(key)) {
-			console.log(key + " -> " + JSON.stringify(dataObj[key]));
+			console.log(dataObj[key]);
 		}
 	}
 }
@@ -285,14 +285,16 @@ function responder(results){
 	alert(results);
 }
 
-function getPersonInfo(dataObject, firstname, lastname){
+function getPersonInfo(dataObject, firstName, lastName){
 	for (var key in dataObject)
 	 {
 			if (dataObject.hasOwnProperty(key))
 			{
-				if (dataObject[key].firstName == firstName && dataObject[key].lastName == lastName);
+				if (dataObject[key].firstName === firstName && dataObject[key].lastName === lastName)
 				{
-					printAllToConsole(dataObject[key]);
+				
+					person = dataObject[key];
+					return printAllToConsole(person);
 				}
 			}
 		 }
@@ -301,8 +303,6 @@ function getPersonInfo(dataObject, firstname, lastname){
 	// look up person's information
 	return result;
 }
-
-console.log(getPersonInfo(dataObject, firstName, lastName));
 
 function getFamily(){
 	// return list of names of immediate family members
