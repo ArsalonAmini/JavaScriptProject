@@ -284,16 +284,20 @@ function responder(results){
 	alert(results);
 }
 
+
 function getPersonInfo(dataObject, firstName, lastName){
+
 	for (var key in dataObject)
 	 {
 			if (dataObject.hasOwnProperty(key))
 			{
+
 				if (dataObject[key].firstName === firstName && dataObject[key].lastName === lastName)
 				{
 				
 					person = dataObject[key];
 					return printAllToConsole(person);
+
 				}
 			}
 	 }
@@ -304,6 +308,7 @@ function getPersonInfo(dataObject, firstName, lastName){
 	// look up person's information
 	return result;
 }
+
 
 function getFamily(){
 	// return list of names of immediate family members
