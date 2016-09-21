@@ -267,23 +267,33 @@ function printAllToConsole(dataObj)
 {
 	for (var key in dataObj) {
 		if (dataObj.hasOwnProperty(key)) {
+			
 			console.log(dataObj[key]);
+			
+			
 		}
-
+		
 	}
 }
-
-    alert("Who do you want to search for?");
-	var firstName = prompt("Enter first name");
-	var lastName = prompt("Enter Last Name");
-
-	var result = getPersonInfo(dataObject, firstName, lastName);
-	responder(result); //pass result into responder function 
+function start(){
+	alert("Who do you want to search for?");
+	search(prompt("Enter first name"),
+	prompt("Enter Last Name"))
+}
 
 function responder(results){
 	// results may be a list of strings, an object, or a single string. 
-	alert(results);
+	for(var i in results){
+		
+	alert(results.join("\n"));
 }
+}
+    
+function search(firstName, lastName){
+	var result = getPersonInfo(dataObject, firstName, lastName);
+	responder(result); //pass result into responder function 
+}
+
 
 
 function getPersonInfo(dataObject, firstName, lastName)
@@ -296,19 +306,26 @@ function getPersonInfo(dataObject, firstName, lastName)
 				if (dataObject.hasOwnProperty(key) && dataObject[key].firstName === firstName && dataObject[key].lastName === lastName)
 				{
 				
-					var person = dataObject[key];
-					return printAllToConsole(person);
+					var person = [];
+					person.push(JSON.stringify(dataObject[key]));
+					printAllToConsole(person);					
+					while (firstName != null && lastName != null)
+				{
+
+						start();
+						break;
+				}
+					
 
 				}
 
-				
-		 
-
 	}
-
+	responder(person);
 
 }
 
+
+start();
 
 function getFamily(){
 	// return list of names of immediate family members
