@@ -264,60 +264,49 @@ var dataObject = {
 	  "currentSpouse": null 
 	}
 };
-
-/*  Remove this from your final submission
-function printAllToConsole(dataObj){
-	for (var key in dataObj) {
+function printAllToConsole(dataObj)
+{
+for (var key in dataObj) {
 		if (dataObj.hasOwnProperty(key)) {
 			console.log(key + " -> " + JSON.stringify(dataObj[key]));
 		}
 	}
 }
-printAllToConsole(dataObject);
-*/
 
-
-function initSearch(dataObject) //function for getting initial search data
-{
-	alert("Who do you want to search for?");
-	var firstname = prompt("Enter first name");
+    alert("Who do you want to search for?");
+	var firstName = prompt("Enter first name");
 	var lastName = prompt("Enter Last Name");
-	var err = string ("Enter a valid name");
-	var result = getPersonInfo("J", "T");
-try
-{
-	for (var key in dataObject)
-	 {
-			if (dataObject.hasOwnProperty(key))
-			{
-				return dataObject[i];
-			}
-		}
-}
-catch(err) 
-{
-	console.log(err.message);
-}
 
+	var result = getPersonInfo(dataObject, firstName, lastName);
 	responder(result); //pass result into responder function 
-
-}
 
 function responder(results){
 	// results may be a list of strings, an object, or a single string. 
 	alert(results);
 }
 
-function getPersonInfo(firstname, lastname){
+function getPersonInfo(dataObject, firstname, lastname){
+	for (var key in dataObject)
+	 {
+			if (dataObject.hasOwnProperty(key))
+			{
+				if (dataObject[key].firstName == firstName && dataObject[key].lastName == lastName);
+				{
+					printAllToConsole(dataObject[key]);
+				}
+			}
+		 }
+	
 	var result = "This will be the information for whoever you searched for";
 	// look up person's information
 	return result;
 }
+
+console.log(getPersonInfo(dataObject, firstName, lastName));
 
 function getFamily(){
 	// return list of names of immediate family members
 }
 
 // there will be much more here, and some of the code above will certainly change
-initSearch();
-window.close(); // exit window as the end of the session -- you may remove this
+//window.close(); // exit window as the end of the session -- you may remove this
