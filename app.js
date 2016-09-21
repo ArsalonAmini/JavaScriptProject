@@ -286,12 +286,14 @@ function responder(results){
 }
 
 
-function getPersonInfo(dataObject, firstName, lastName){
+function getPersonInfo(dataObject, firstName, lastName)
+{
+	if (dataObject.hasOwnProperty(key))
+			{
 
 	for (var key in dataObject)
 	 {
-			if (dataObject.hasOwnProperty(key))
-			{
+			
 
 				if (dataObject[key].firstName === firstName && dataObject[key].lastName === lastName)
 				{
@@ -300,12 +302,18 @@ function getPersonInfo(dataObject, firstName, lastName){
 					return printAllToConsole(person);
 
 				}
-			}
-		 }
-	
-	var result = "This will be the information for whoever you searched for";
-	// look up person's information
-	return result;
+
+
+			
+			
+		 	else
+		 {
+				alert("no results");
+		}
+
+	}
+}
+
 }
 
 
