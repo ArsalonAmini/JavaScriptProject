@@ -270,6 +270,7 @@ function printAllToConsole(dataObj)
 		if (dataObj.hasOwnProperty(key)) {
 			console.log(dataObj[key]);
 		}
+
 	}
 }
 
@@ -288,31 +289,22 @@ function responder(results){
 
 function getPersonInfo(dataObject, firstName, lastName)
 {
-	if (dataObject.hasOwnProperty(key))
-			{
 
 	for (var key in dataObject)
 	 {
 			
 
-				if (dataObject[key].firstName === firstName && dataObject[key].lastName === lastName)
+				if (dataObject.hasOwnProperty(key) && dataObject[key].firstName === firstName && dataObject[key].lastName === lastName)
 				{
 				
-					person = dataObject[key];
+					var person = dataObject[key];
 					return printAllToConsole(person);
 
 				}
-
-
-			
-			
-		 	else
-		 {
-				alert("no results");
-		}
+				
+		 
 
 	}
-}
 
 }
 
