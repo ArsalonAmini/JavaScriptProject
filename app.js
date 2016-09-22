@@ -267,28 +267,41 @@ function printAllToConsole(dataObj)
 {
 	for (var key in dataObj) {
 		if (dataObj.hasOwnProperty(key)) {
+			
 			console.log(dataObj[key]);
+			
+			
 		}
+		
 	}
 }
-
-    alert("Who do you want to search for?");
-	var firstName = prompt("Enter first name");
-	var lastName = prompt("Enter Last Name");
-
-	var result = getPersonInfo(dataObject, firstName, lastName);
-	responder(result); //pass result into responder function 
+function start(){
+	alert("Who do you want to search for?");
+	search(prompt("Enter first name"),
+	prompt("Enter Last Name"))
+}
 
 function responder(results){
 	// results may be a list of strings, an object, or a single string. 
-	alert(results);
+	for(var i in results){
+		
+	alert(results.join("\n"));
+}
+}
+    
+function search(firstName, lastName){
+	var result = getPersonInfo(dataObject, firstName, lastName);
+	responder(result); //pass result into responder function 
 }
 
 
-function getPersonInfo(dataObject, firstName, lastName){
+
+function getPersonInfo(dataObject, firstName, lastName)
+{
 
 	for (var key in dataObject)
 	 {
+<<<<<<< HEAD
 			if (dataObject.hasOwnProperty(key))
 			{
 				if (dataObject[key].firstName === firstName && dataObject[key] === lastName)
@@ -318,6 +331,7 @@ function getDecendentId(dataObject, firstName, lastName)
 		
 		}
 	}
+
 }
 
 var getDecendentInfo = getDecendentInfo(dataObject, decendentId);
@@ -332,6 +346,7 @@ function getDecendentInfo (dataObject, decendentId)
 					console.log(printAllToConsole(decendent));
 				}
 			}
+
 }
 
 
