@@ -284,14 +284,16 @@ function start(){
 function responder(results){
 	// results may be a list of strings, an object, or a single string. 
 	for(var i in results){
-		
-	alert(results.join("\n"));
+		var specList = [JSON.stringify(results)];
+	alert(specList.join("\n"));
+	getFamily(results);
+	
 }
+
 }
     
 function search(firstName, lastName){
-	var result = getPersonInfo(dataObject, firstName, lastName);
-	responder(result); //pass result into responder function 
+	getPersonInfo(dataObject, firstName, lastName);
 }
 
 
@@ -307,7 +309,7 @@ function getPersonInfo(dataObject, firstName, lastName)
 				{
 				
 					var person = [];
-					person.push(JSON.stringify(dataObject[key]));
+					person.push(dataObject[key]);
 					printAllToConsole(person);					
 					while (firstName != null && lastName != null)
 				{
@@ -323,13 +325,48 @@ function getPersonInfo(dataObject, firstName, lastName)
 	responder(person);
 
 }
+function getSpouse(dataObj){
+	for(var key in dataObj){
+		if(key === "currentSpouse"){
+			return dataObj[key].firstName + " " + dataObj[key].lastName;
 
+		}
+
+		}
+
+		
+}
+
+
+function getSpouseInfo(dataObj, spouseID){
+	for(var key in dataObj){
+		if(dataObj[key].id === spouseID){
+			console.log(dataObj[key].firstName);
+		}
+	}
+}
+
+function getParents(dataObj){
+	var index =0;
+	for(var key in dataObj){
+		return dataObj[key].parents[index];
+		index++;
+	}
+
+}
+
+function getFamily(dataObj){
+	var parents = getParents(dataObj);
+	var spouse = getSpouse(dataObj);
+	alert(parents + " " + spouse);
+	
+
+	
+}
 
 start();
 
-function getFamily(){
-	// return list of names of immediate family members
-}
+
 
 // there will be much more here, and some of the code above will certainly change
 //window.close(); // exit window as the end of the session -- you may remove this
