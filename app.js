@@ -267,41 +267,28 @@ function printAllToConsole(dataObj)
 {
 	for (var key in dataObj) {
 		if (dataObj.hasOwnProperty(key)) {
-			
 			console.log(dataObj[key]);
-			
-			
 		}
-		
 	}
 }
-function start(){
-	alert("Who do you want to search for?");
-	search(prompt("Enter first name"),
-	prompt("Enter Last Name"))
-}
+
+    alert("Who do you want to search for?");
+	var firstName = prompt("Enter first name");
+	var lastName = prompt("Enter Last Name");
+
+	var result = getPersonInfo(dataObject, firstName, lastName);
+	responder(result); //pass result into responder function 
 
 function responder(results){
 	// results may be a list of strings, an object, or a single string. 
-	for(var i in results){
-		
-	alert(results.join("\n"));
-}
-}
-    
-function search(firstName, lastName){
-	var result = getPersonInfo(dataObject, firstName, lastName);
-	responder(result); //pass result into responder function 
+	alert(results);
 }
 
 
-
-function getPersonInfo(dataObject, firstName, lastName)
-{
+function getPersonInfo(dataObject, firstName, lastName){
 
 	for (var key in dataObject)
 	 {
-<<<<<<< HEAD
 			if (dataObject.hasOwnProperty(key))
 			{
 				if (dataObject[key].firstName === firstName && dataObject[key] === lastName)
@@ -331,7 +318,6 @@ function getDecendentId(dataObject, firstName, lastName)
 		
 		}
 	}
-
 }
 
 var getDecendentInfo = getDecendentInfo(dataObject, decendentId);
@@ -346,9 +332,42 @@ function getDecendentInfo (dataObject, decendentId)
 					console.log(printAllToConsole(decendent));
 				}
 			}
-
 }
 
+spouseID = getSpouseId(dataObject, firstName, lastName);
+
+function getSpouseId(dataObject, firstName, lastName)
+{
+	for (var key in dataObject)
+	{
+		if (dataObject.hasOwnProperty(key))
+		{
+			
+		if(dataObject[key].firstName === firstName && dataObject[key].lastName === lastName)
+		{
+			var spouseID = dataObject[key].currentSpouse;
+			return spouseID;
+		}
+		
+		}
+	}
+}
+
+var spouseName = getSpouseInfo(dataObject, spouseID);
+
+function getSpouseInfo (dataObject, spouseID)
+{
+	for (var key in dataObject)
+	{
+		if (dataObject[key].id == spouseID)
+		{
+			spouseFirstName = dataObject[key].firstName;
+			spouseLastName = dataObject[key].lastName;
+			spouse = spouseFirstName + spouseLastName;
+			console.log(printAllToConsole(spouse));
+		}
+	}
+}
 
 //function getFamily()
 	// return list of names of immediate family members
