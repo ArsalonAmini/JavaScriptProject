@@ -267,22 +267,20 @@ function printAllToConsole(dataObj)
 {
 	for (var key in dataObj) {
 		if (dataObj.hasOwnProperty(key)) {
-			
 			console.log(dataObj[key]);
-			
-			
 		}
-		
 	}
 }
-function start(){
-	alert("Who do you want to search for?");
-	search(prompt("Enter first name"),
-	prompt("Enter Last Name"))
-}
+
+    alert("Who do you want to search for?");
+	var firstName = prompt("Enter first name");
+	var lastName = prompt("Enter Last Name");
+
+	var result = getPersonInfo(dataObject, firstName, lastName);
+	responder(result); 
 
 function responder(results){
-	// results may be a list of strings, an object, or a single string. 
+
 	for(var i in results){
 		var specList = [JSON.stringify(results)];
 	alert(specList.join("\n"));
@@ -294,16 +292,47 @@ function responder(results){
     
 function search(firstName, lastName){
 	getPersonInfo(dataObject, firstName, lastName);
+
+	alert(results);
 }
 
 
-
-function getPersonInfo(dataObject, firstName, lastName)
-{
+function getPersonInfo(dataObject, firstName, lastName){
 
 	for (var key in dataObject)
 	 {
+			if (dataObject.hasOwnProperty(key))
+			{
+				if (dataObject[key].firstName === firstName && dataObject[key] === lastName)
+				{
+					person = dataObject[key];
+					return printAllToConsole(person);
+				}
+			}
+	 }
+
+}
+
+var decendentId = getDecendentId(dataObject,firstName, lastName);
+
+
+function getDecendentId(dataObject, firstName, lastName)
+{
+	for (var key in dataObject)
+	{
+		if (dataObject.hasOwnProperty(key))
+		{
 			
+		if(dataObject[key].firstName === firstName && dataObject[key].lastName === lastName)
+		{
+			var id = dataObject[key].id;
+			return id;
+		}
+		
+		}
+	}
+}
+
 
 				if (dataObject.hasOwnProperty(key) && dataObject[key].firstName === firstName && dataObject[key].lastName === lastName)
 				{
@@ -314,16 +343,38 @@ function getPersonInfo(dataObject, firstName, lastName)
 					while (firstName != null && lastName != null)
 				{
 
-						start();
-						break;
-				}
-					
+var getDecendentInfo = getDecendentInfo(dataObject, decendentId);
 
-				}
 
+function getDecendentInfo (dataObject, decendentId)
+{
+	for (var key in dataObject)
+			{
+				if(dataObject[key].parents[0] == decendentId || dataObject[key].parents[1] == decendentId)
+				{
+					decendent = dataObject[key];
+					console.log(printAllToConsole(decendent));
+				}
+			}
+}
+
+spouseID = getSpouseId(dataObject, firstName, lastName);
+
+function getSpouseId(dataObject, firstName, lastName)
+{
+	for (var key in dataObject)
+	{
+		if (dataObject.hasOwnProperty(key))
+		{
+			
+		if(dataObject[key].firstName === firstName && dataObject[key].lastName === lastName)
+		{
+			var spouseID = dataObject[key].currentSpouse;
+			return spouseID;
+		}
+		
+		}
 	}
-	responder(person);
-
 }
 function getSpouse(dataObj){
 	for(var key in dataObj){
@@ -331,6 +382,7 @@ function getSpouse(dataObj){
 			return dataObj[key].firstName + " " + dataObj[key].lastName;
 
 		}
+
 
 		}
 
@@ -355,6 +407,24 @@ function getParents(dataObj){
 
 }
 
+var spouseName = getSpouseInfo(dataObject, spouseID);
+
+function getSpouseInfo (dataObject, spouseID)
+{
+	for (var key in dataObject)
+	{
+		if (dataObject[key].id == spouseID)
+		{
+			spouseFirstName = dataObject[key].firstName;
+			spouseLastName = dataObject[key].lastName;
+			spouse = spouseFirstName + spouseLastName;
+			console.log(printAllToConsole(spouse));
+		}
+	}
+}
+
+
+
 function getFamily(dataObj){
 	var parents = getParents(dataObj);
 	var spouse = getSpouse(dataObj);
@@ -365,8 +435,3 @@ function getFamily(dataObj){
 }
 
 start();
-
-
-
-// there will be much more here, and some of the code above will certainly change
-//window.close(); // exit window as the end of the session -- you may remove this
