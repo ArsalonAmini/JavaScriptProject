@@ -291,28 +291,53 @@ function getPersonInfo(dataObject, firstName, lastName){
 	 {
 			if (dataObject.hasOwnProperty(key))
 			{
-
-				if (dataObject[key].firstName === firstName && dataObject[key].lastName === lastName)
+				if (dataObject[key].firstName === firstName && dataObject[key] === lastName)
 				{
-				
 					person = dataObject[key];
 					return printAllToConsole(person);
-
 				}
 			}
 	 }
-	
+}
 
-	
-	var result = "This will be the information for whoever you searched for";
-	// look up person's information
-	return result;
+var decendentId = getDecendentId(dataObject,firstName, lastName);
+
+
+function getDecendentId(dataObject, firstName, lastName)
+{
+	for (var key in dataObject)
+	{
+		if (dataObject.hasOwnProperty(key))
+		{
+			
+		if(dataObject[key].firstName === firstName && dataObject[key].lastName === lastName)
+		{
+			var id = dataObject[key].id;
+			return id;
+		}
+		
+		}
+	}
+}
+
+var getDecendentInfo = getDecendentInfo(dataObject, decendentId);
+
+function getDecendentInfo (dataObject, decendentId)
+{
+	for (var key in dataObject)
+			{
+				if(dataObject[key].parents[0] == decendentId || dataObject[key].parents[1] == decendentId)
+				{
+					decendent = dataObject[key];
+					console.log(printAllToConsole(decendent));
+				}
+			}
 }
 
 
-function getFamily(){
+//function getFamily()
 	// return list of names of immediate family members
-}
+
 
 // there will be much more here, and some of the code above will certainly change
 //window.close(); // exit window as the end of the session -- you may remove this
