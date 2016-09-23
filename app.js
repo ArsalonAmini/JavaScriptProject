@@ -386,13 +386,12 @@ var dataObject = {
   	{
   		for(var item in dataObject)
   		{
-  			if(dataObject[item] === Array){
-  				for(var key in item){
-  					//need to return parents here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-  				}
-  			}
-  			else if(dataObject[item][traitType] == userInput)
+  			
+  			if(dataObject[item][traitType] == userInput && traitType != null)
+  			{
+
   				people.push(item);
+  			}
   		}
   	}
 
@@ -411,7 +410,7 @@ function getSpouse(person)
 
   	function getParents(person)
 {
-  		searchTrait("parents", person);
+  		
   	}
 
 function searchTraits(listOfTraits)
