@@ -265,16 +265,12 @@ var dataObject = {
 	}
 };
 
-/*  Remove this from your final submission
-function printAllToConsole(dataObj){
-	for (var key in dataObj) {
-		if (dataObj.hasOwnProperty(key)) {
-			console.log(key + " -> " + JSON.stringify(dataObj[key]));
-		}
-	}
-}
-printAllToConsole(dataObject);
-*/
+
+
+
+
+
+
   	var people = [];
   	var traitsToSearch = [];
   	var immediateFamily = [];
@@ -286,7 +282,7 @@ printAllToConsole(dataObject);
 
 
   	function start(){
-  		var result = prompt("What do you want to do? Type one of following to search:\r\n'name'\r\n'descendants'\r\n'next of kin'\r\n'trait'\r\n'traits'\r\n'age'\r\n'family'\r\nType 'exit' to end.");
+  		var result = prompt("What do you want to do? Type one of following to search:\r\n'name'\r\n'family'\r\n'age'\r\n'trait'\r\n'traits'\r\n'descendants'\r\n'next of kin'\r\nType 'exit' to end.");
   		switch(result){
   			
   			case "name":
@@ -344,7 +340,7 @@ printAllToConsole(dataObject);
   			alert("something");
   			break;
   			default:
-  			    exit();
+  			    alert("Error");
   		    break;
   		}
   		start();
@@ -368,6 +364,7 @@ printAllToConsole(dataObject);
 	function getFamily(person){
   		getSpouse(person);
   		getDescendants(person);
+  		getParents(person);
   	}
   	
 
@@ -389,7 +386,12 @@ printAllToConsole(dataObject);
   	{
   		for(var item in dataObject)
   		{
-  			if(dataObject[item][traitType] == userInput)
+  			if(dataObject[item] === Array){
+  				for(var key in item){
+  					//need to return parents here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+  				}
+  			}
+  			else if(dataObject[item][traitType] == userInput)
   				people.push(item);
   		}
   	}
@@ -405,6 +407,11 @@ printAllToConsole(dataObject);
 function getSpouse(person)
 {
   		searchTrait("currentSpouse", person);
+  	}
+
+  	function getParents(person)
+{
+  		searchTrait("parents", person);
   	}
 
 function searchTraits(listOfTraits)
