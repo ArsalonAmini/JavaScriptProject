@@ -1,5 +1,5 @@
-var dataObject =  [
-	 {"id" : "272822514",
+var dataObject = { 
+	"272822514" : { 
 	  "firstName": "Billy",
 	  "lastName": "Bob",
 	  "gender": "male",
@@ -11,7 +11,7 @@ var dataObject =  [
 	  "parents": [],
 	  "currentSpouse": 401222887 
 	},
-	 { "id": "401222887",
+	"401222887" : { 
 	  "firstName": "Uma",
 	  "lastName": "Bob",
 	  "gender": "female",
@@ -23,7 +23,7 @@ var dataObject =  [
 	  "parents": [],
 	  "currentSpouse": 272822514 
 	},
-	 { "id" : "409574486" ,
+	"409574486" : { 
 	  "firstName": "Michael",
 	  "lastName": "Walkens",
 	  "gender": "male",
@@ -35,7 +35,7 @@ var dataObject =  [
 	  "parents": [],
 	  "currentSpouse": 260451248 
 	},
-	{ "id" :"260451248",
+	"260451248" : {
 	  "firstName": "Jon",
 	  "lastName": "Walkens",
 	  "gender": "male",
@@ -47,7 +47,7 @@ var dataObject =  [
 	  "parents": [],
 	  "currentSpouse": 409574486 
 	},
-	 { "id" : "629807187", 
+	"629807187" : {
 	  "firstName": "Jack",
 	  "lastName": "Pafoy",
 	  "gender": "male",
@@ -59,7 +59,7 @@ var dataObject =  [
 	  "parents": [],
 	  "currentSpouse": 464142841 
 	},
-	 { "id" : "464142841",
+	"464142841" : {
 	  "firstName": "Jen",
 	  "lastName": "Pafoy",
 	  "gender": "female",
@@ -71,7 +71,7 @@ var dataObject =  [
 	  "parents": [],
 	  "currentSpouse": 629807187 
 	},
-	 { "id" : "982411429",
+	"982411429" : {
 	  "firstName": "Mister",
 	  "lastName": "Potatoo",
 	  "gender": "male",
@@ -83,7 +83,7 @@ var dataObject =  [
 	  "parents": [],
 	  "currentSpouse": 595767575 
 	},
-	 {"id" : "595767575", 
+	"595767575" : {
 	  "firstName": "Missuz",
 	  "lastName": "Potatoo",
 	  "gender": "female",
@@ -95,7 +95,7 @@ var dataObject =  [
 	  "parents": [],
 	  "currentSpouse": 982411429 
 	},
-	 { "id" : "693243224",
+	"693243224" : {
 	  "firstName": "Joy",
 	  "lastName": "Madden",
 	  "gender": "female",
@@ -107,7 +107,7 @@ var dataObject =  [
 	  "parents": [],
 	  "currentSpouse": 693243224 
 	},
-	  { "id" : "888201200",
+	"888201200" : {
 	  "firstName": "Mader",
 	  "lastName": "Madden",
 	  "gender": "male",
@@ -119,7 +119,7 @@ var dataObject =  [
 	  "parents": [],
 	  "currentSpouse": 888201200 
 	},
-	 { "id" : "878013758",
+	"878013758" : {
 	  "firstName": "Jill",
 	  "lastName": "Pafoy",
 	  "gender": "Bob",
@@ -131,7 +131,7 @@ var dataObject =  [
 	  "parents": [401222887,401222887],
 	  "currentSpouse": 294874671 
 	},
-	{ "id" : "951747547",
+	"951747547" : {
 	  "firstName": "Ralph",
 	  "lastName": "Bob",
 	  "gender": "male",
@@ -143,7 +143,7 @@ var dataObject =  [
 	  "parents": [401222887,401222887],
 	  "currentSpouse": 159819275 
 	},
-	{ "id" : "159819275",  
+	"159819275" : {
 	  "firstName": "Jasmine",
 	  "lastName": "Bob",
 	  "gender": "female",
@@ -155,7 +155,7 @@ var dataObject =  [
 	  "parents": [409574486,260451248],
 	  "currentSpouse": 951747547 
 	},
-	{"id" : "348457184",
+	"348457184" : {
 	  "firstName": "Annie",
 	  "lastName": "Pafoy",
 	  "gender": "female",
@@ -167,7 +167,7 @@ var dataObject =  [
 	  "parents": [629807187,464142841],
 	  "currentSpouse": null 
 	},
-	 {"id" : "294874671",
+	"294874671" : {
 	  "firstName": "Dave",
 	  "lastName": "Pafoy",
 	  "gender": "male",
@@ -179,7 +179,7 @@ var dataObject =  [
 	  "parents": [629807187,464142841],
 	  "currentSpouse": 878013758 
 	},
-	 {"id" : "931247228",
+	"931247228" : {
 	  "firstName": "Amii",
 	  "lastName": "Pafoy",
 	  "gender": "female",
@@ -191,7 +191,7 @@ var dataObject =  [
 	  "parents": [629807187,464142841],
 	  "currentSpouse": null 
 	},
-	 {"id" : "822843554",
+	"822843554" : {
 	  "firstName": "Regina",
 	  "lastName": "Madden",
 	  "gender": "female",
@@ -203,7 +203,7 @@ var dataObject =  [
 	  "parents": [693243224, 888201200],
 	  "currentSpouse": null 
 	},
-	 {"id" : "819168108", 
+	"819168108" : {
 	  "firstName": "Hana",
 	  "lastName": "Madden",
 	  "gender": "female",
@@ -215,7 +215,7 @@ var dataObject =  [
 	  "parents": [693243224, 888201200],
 	  "currentSpouse": null 
 	},
-	 { "id" : "969837479",
+	"969837479" : {
 	  "firstName": "Eloise",
 	  "lastName": "Madden",
 	  "gender": "female",
@@ -227,7 +227,7 @@ var dataObject =  [
 	  "parents": [693243224, 888201200],
 	  "currentSpouse": null 
 	},
-	 { "id" : "313207561",
+	"313207561" : {
 	  "firstName": "Mattias",
 	  "lastName": "Madden",
 	  "gender": "male",
@@ -239,7 +239,7 @@ var dataObject =  [
 	  "parents": [693243224, 888201200],
 	  "currentSpouse": 313997561 
 	},
-	 { "id" : "313997561",
+	"313997561" : {
 	  "firstName": "Ellen",
 	  "lastName": "Madden",
 	  "gender": "female",
@@ -251,7 +251,7 @@ var dataObject =  [
 	  "parents": [],
 	  "currentSpouse": 313207561 
 	},
-	  {"id" : "313998000",
+	"313998000" : {
 	  "firstName": "Joey",
 	  "lastName": "Madden",
 	  "gender": "female",
@@ -262,116 +262,216 @@ var dataObject =  [
 	  "occupation": "doctor",
 	  "parents": [313207561,313997561],
 	  "currentSpouse": null 
-}];
-function printAllToConsole(dataObj)
-{
+	}
+};
+
+/*  Remove this from your final submission
+function printAllToConsole(dataObj){
 	for (var key in dataObj) {
 		if (dataObj.hasOwnProperty(key)) {
-			console.log(dataObj[key]);
+			console.log(key + " -> " + JSON.stringify(dataObj[key]));
 		}
 	}
 }
+printAllToConsole(dataObject);
+*/
+  	var personList = [];
+  	var traitsToSearch = [];
+  	var immediateFamily = [];
 
-    alert("Who do you want to search for?");
-	var firstName = prompt("Enter first name");
-	var lastName = prompt("Enter Last Name");
+  	askUser();
 
-	var result = getPersonInfo(dataObject, firstName, lastName);
-	responder(result); //pass result into responder function 
 
+  	function askUser(){
+  		var result = prompt("What do you want to do? Type one of following to search:\r\n'name'\r\n'descendants'\r\n'next of kin'\r\n'trait'\r\n'traits'\r\n'age'\r\n'family'\r\nType 'exit' to end.");
+  		switch(result){
+  			case "name":
+  				var person = promptForName();
+  				errorCheck(person);
+  				displayPerson(dataObject[person], "Match: \r\n");
+  				break;
+  			case "descendants":
+  				var person = promptForName();
+  				errorCheck(person);
+  				personList = [];
+  				getDescendants(person);
+  				displayListOfPersons(personList, "Descendants: ");
+  				break;
+  			case "next of kin":
+  				var person = promptForName();
+  				errorCheck(person);
+  				personList = [];
+  				getDescendants(person);
+  				displayPerson(dataObject[getOldestFromArray(personList)], "Next of kin:\r\n");
+  				break;
+  			case "trait":
+  				var typeSearch = prompt("What trait do you want to search by? type: 'gender, height, weight, eye color, or occupation'");
+  				var input = prompt(typeSearch);
+  				personList = [];
+  				if(typeSearch == "eye color")
+  					searchByTrait("eyeColor", input);
+  				else searchByTrait(typeSearch, input);
+  				displayListOfPersons(personList, "Matches:\r\n");
+  				break;
+  			case "traits":
+  				traitsToSearch = [];
+  				traitsToSearch.push(prompt("Search for male or female?"));
+  				traitsToSearch.push(prompt("Height: "));
+  				traitsToSearch.push(prompt("Weight: "));
+  				traitsToSearch.push(prompt("Eye Color: "));
+  				traitsToSearch.push(prompt("Occupation: "));
+  				displayPerson(dataObject[searchFiveTrait(traitsToSearch)], "Match:\r\n");
+  				break;
+  			case "age":
+  				personList = [];
+  				searchByAge(prompt("Enter age:"));
+  				displayListOfPersons(personList, "Matches: ");
+  				break;
+  			case "family":
+  				personList = [];
+  				var person = promptForName();
+  				errorCheck(person);
+  				getImmediateFamily(person);
+  				displayListOfPersons(personList, "Immediate family: ");
+  				break;
+  			case "exit":
+  				exitWebPage();
+  				break;
+  			default:
+  			    errorCheck(undefined);
+  			    break;
+  		}
+  		askUser();
+  	}
+  	function exitWebpage(){
+  		window.close();
+  	}
+  	function promptForName(){
+  		return getPersonByName(prompt("Enter person's first name: "),prompt("Enter person's last name: "));
+  	}
+  	function errorCheck(check){
+  		try{
+  			if(check == undefined)
+  				throw('Error');
+  		}catch(error){
+  			console.log(error.message);
+  			console.log('No Data Found! Reload webpage.');
+  		}
+  		return check;
+  	}
+  	function getOldestFromArray(listOfPeople){
+  		var OldestPerson = undefined;
+  		for (var i = 0; i < listOfPeople.length; i++) {
+  			var currentDOB = dataObject[listOfPeople[i]].dob.split("/");
+  			if(OldestPerson != undefined){
+  				var previousDOB = dataObject[OldestPerson].dob.split("/");
+  			}
+  			if(OldestPerson == undefined){
+  				OldestPerson = listOfPeople[i];
+  			} else if(currentDOB[2] < previousDOB[2]){
+  				OldestPerson = listOfPeople[i];
+  			}
+  		}
+  		return OldestPerson;
+  	}
+  	function getImmediateFamily(person){
+  		getSpouse(person);
+  		getDescendants(person);
+  	}
+  	function getSpouse(person){
+  		searchByTrait("currentSpouse", person);
+  	}
+  	function displayListOfPersons(listOfPeople, strType){
+  		for(var i = 0; i < listOfPeople.length; i++){
+  			displayPerson(dataObject[listOfPeople[i]], (strType + (i + 1) + ":\r\n"))
+  		}
+  	}
+  	function getDescendants(person){
+  		for (var item in dataObject) {
+  			if(dataObject[item].parents.length != 0){
+  				if(dataObject[item].parents[0] == person || dataObject[item].parents[1] == person){
+  					personList.push(item);
+  				}
+  			}
+  		}
+  	}
+  	function displayPerson(person, displayString){
+  		var buildPerson = "" + displayString;
+  		for(var item in person){
+  			buildPerson = buildPerson + item + ": " + person[item] + "\r\n";
+  		}
+  		alert(buildPerson);
+  	}
+  	function getPersonByName(firstNameSearch, lastNameSearch){
+  		for (var item in dataObject) {
+  			if (dataObject.hasOwnProperty(item)) {
+				if(dataObject[item].firstName == firstNameSearch && dataObject[item].lastName == lastNameSearch){
+					return item;
+				}
+			}
+  		}
+  	}
+  	function searchFiveTrait(listOfTraits){
+  		for(var item in dataObject){
+  			if(dataObject[item].gender == listOfTraits[0] && dataObject[item].height == listOfTraits[1] && 
+  				dataObject[item].weight == listOfTraits[2] && dataObject[item].eyeColor == listOfTraits[3] && 
+  				dataObject[item].occupation == listOfTraits[4])
+  				return item;
+  		}
+  	}
+  	function searchByAge(ageSearch){
+  		for(var item in dataObject){
+  			if(getAge(dataObject[item].dob) == parseInt(ageSearch))
+  				personList.push(item);
+  		}
+  	}
+  	function getAge(birthDate) {
+
+    	var today = new Date();
+    	var nowyear = today.getFullYear();
+    	var nowmonth = today.getMonth();
+    	var nowday = today.getDate();
+
+    	var currentDoB = birthDate.split("/");
+    	var birthyear = currentDoB[2];
+    	var birthmonth = currentDoB[0];
+    	var birthday = currentDoB[1];
+
+    	var age = nowyear - birthyear;
+    	var age_month = nowmonth - birthmonth;
+    	var age_day = nowday - birthday;
+   
+    	if(age_month < 0 || (age_month == 0 && age_day < 0)) {
+            age = age -1;
+        }
+        age = parseInt(age);
+    	return age;
+	}
+  	function searchByTrait(traitType, userInput){
+  		for(var item in dataObject){
+  			if(dataObject[item][traitType] == userInput)
+  				personList.push(item);
+  		}
+  	}
+  	/*function initSearch(){
+	alert("Hello World");
+	// get all the information you need to run the search
+	var yourName = prompt("Who do you want to search for?");
+	// then pass that info to the respective function.
+	var result = getPersonInfo("J", "T")
+	// once the search is done, pass the results to the responder function
+	responder(result);
+}
 function responder(results){
 	// results may be a list of strings, an object, or a single string. 
 	alert(results);
 }
-
-
-function getPersonInfo(dataObject, firstName, lastName){
-
-	for (var key in dataObject)
-	 {
-			if (dataObject.hasOwnProperty(key))
-			{
-				if (dataObject[key].firstName === firstName && dataObject[key] === lastName)
-				{
-					person = dataObject[key];
-					return printAllToConsole(person);
-				}
-			}
-	 }
-}
-
-var decendentId = getDecendentId(dataObject,firstName, lastName);
-
-
-function getDecendentId(dataObject, firstName, lastName)
-{
-	for (var key in dataObject)
-	{
-		if (dataObject.hasOwnProperty(key))
-		{
-			
-		if(dataObject[key].firstName === firstName && dataObject[key].lastName === lastName)
-		{
-			var id = dataObject[key].id;
-			return id;
-		}
+function getPersonInfo(firstname, lastname){
 		
-		}
-	}
 }
-
-var getDecendentInfo = getDecendentInfo(dataObject, decendentId);
-
-function getDecendentInfo (dataObject, decendentId)
-{
-	for (var key in dataObject)
-			{
-				if(dataObject[key].parents[0] == decendentId || dataObject[key].parents[1] == decendentId)
-				{
-					decendent = dataObject[key];
-					console.log(printAllToConsole(decendent));
-				}
-			}
-}
-
-spouseID = getSpouseId(dataObject, firstName, lastName);
-
-function getSpouseId(dataObject, firstName, lastName)
-{
-	for (var key in dataObject)
-	{
-		if (dataObject.hasOwnProperty(key))
-		{
-			
-		if(dataObject[key].firstName === firstName && dataObject[key].lastName === lastName)
-		{
-			var spouseID = dataObject[key].currentSpouse;
-			return spouseID;
-		}
-		
-		}
-	}
-}
-
-var spouseName = getSpouseInfo(dataObject, spouseID);
-
-function getSpouseInfo (dataObject, spouseID)
-{
-	for (var key in dataObject)
-	{
-		if (dataObject[key].id == spouseID)
-		{
-			spouseFirstName = dataObject[key].firstName;
-			spouseLastName = dataObject[key].lastName;
-			spouse = spouseFirstName + spouseLastName;
-			console.log(printAllToConsole(spouse));
-		}
-	}
-}
-
-//function getFamily()
+function getFamily(){
 	// return list of names of immediate family members
-
-
+}
 // there will be much more here, and some of the code above will certainly change
+initSearch();*/
 //window.close(); // exit window as the end of the session -- you may remove this
