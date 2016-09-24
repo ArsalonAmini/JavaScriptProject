@@ -362,9 +362,9 @@ var dataObject = {
   	}
 
 	function getFamily(person){
+  		getParents(person);
   		getSpouse(person);
   		getDescendants(person);
-  		getParents(person);
   	}
   	
 
@@ -386,14 +386,34 @@ var dataObject = {
   	{
   		for(var item in dataObject)
   		{
+  			if(item === userInput){
+  				people.push(dataObject[item].parents[0]);
+  				people.push(dataObject[item].parents[1]);
+  				break;
+  			}
   			
-  			if(dataObject[item][traitType] == userInput && traitType != null)
+  			else if(dataObject[item][traitType] == userInput && traitType != null)
   			{
 
   				people.push(item);
   			}
   		}
   	}
+
+
+function searchCurrentSpouse(traitType, userinput){
+	for(var item in dataObject[traitType])
+  		{ 
+  			if(dataObject[item][traitType] == userInput && traitType != null)
+  			{
+
+  				people.push(item);
+  			}
+  		}
+
+
+}
+
 
   	  	function displayPerson(person, displayString)
   	  	{
@@ -405,18 +425,19 @@ var dataObject = {
   	}
 function getSpouse(person)
 {
-  		searchTrait("currentSpouse", person);
+  		searchCurrentSpouse("currentSpouse", person);
   	}
 
   	function getParents(person)
 {
-  		
+  		searchTrait("parents" + ": " + [0], person);
   	}
 
 function searchTraits(listOfTraits)
 {
   		for(var item in dataObject)
   		{
+
   			if(dataObject[item].gender == listOfTraits[0] && dataObject[item].height == listOfTraits[1] && 
   				dataObject[item].weight == listOfTraits[2] && dataObject[item].eyeColor == listOfTraits[3] && 
   				dataObject[item].occupation == listOfTraits[4])
